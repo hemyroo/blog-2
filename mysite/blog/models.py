@@ -25,7 +25,7 @@ class Post(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_posts')
 
     objects = models.Manager()
-    published = PublishmentManager
+    published = PublishmentManager()
 
     class Meta:
         ordering = ['-publish',]
